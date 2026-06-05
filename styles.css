@@ -186,9 +186,9 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
-  gap: 1.05rem;
-  padding: 1.15rem 0;
+  grid-template-columns: minmax(0, 0.92fr) minmax(380px, 1.08fr);
+  gap: 1.5rem;
+  padding: 1.15rem 0 1.35rem;
   align-items: center;
   margin: 0;
 }
@@ -219,6 +219,28 @@ main {
   box-shadow: none;
   background: transparent;
   padding: clamp(0.2rem, 0.8vw, 0.65rem) 0.2rem;
+  max-width: 34rem;
+}
+
+.hero-lockup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gsds-logo {
+  width: clamp(9.76rem, 19.2vw, 14.4rem);
+  height: auto;
+  object-fit: contain;
+}
+
+.kaist-emblem {
+  width: clamp(3.36rem, 5.6vw, 4.56rem);
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(15, 79, 168, 0.12));
 }
 
 .eyebrow {
@@ -234,9 +256,9 @@ main {
 }
 
 .hero-summary {
-  max-width: 31rem;
+  max-width: 28rem;
   margin-top: 0.8rem;
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 
@@ -294,36 +316,39 @@ main {
 }
 
 .hero-pills li {
-  padding: 0.5rem 0.9rem;
+  padding: 0.58rem 1rem;
   border-radius: 999px;
   background: rgba(142, 212, 200, 0.2);
   color: var(--main-30-deep);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .hero-media {
   display: grid;
-  gap: 0.8rem;
+  justify-items: end;
 }
 
 .portrait-card {
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--surface-strong);
-  max-width: 440px;
+  width: min(100%, 560px);
   justify-self: end;
 }
 
 .portrait-card img {
-  aspect-ratio: 4 / 5;
+  width: 100%;
+  aspect-ratio: 5 / 5.45;
   object-fit: cover;
-  object-position: 50% center;
+  object-position: 50% 40%;
 }
 
 .focus-card {
+  margin-top: 0.8rem;
+  max-width: 31rem;
   border-radius: var(--radius-small);
-  padding: 1rem 1.1rem;
+  padding: 0.95rem 1.1rem;
   background: linear-gradient(160deg, var(--main-30) 0%, var(--main-30-deep) 100%);
   color: #f4ffff;
 }
@@ -542,7 +567,11 @@ main {
   .portrait-card {
     justify-self: start;
     width: 100%;
-    max-width: 520px;
+    max-width: 560px;
+  }
+
+  .hero-media {
+    justify-items: start;
   }
 
   .contact-card {
@@ -573,5 +602,9 @@ main {
   .section-block,
   .contact-card {
     padding: 1.25rem;
+  }
+
+  .hero-lockup {
+    gap: 0.8rem;
   }
 }
