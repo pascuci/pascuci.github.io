@@ -328,6 +328,18 @@ main {
   color: #f4ffff;
 }
 
+.focus-list {
+  margin: 0.7rem 0 0;
+  padding-left: 1.05rem;
+  display: grid;
+  gap: 0.4rem;
+  color: rgba(244, 255, 255, 0.92);
+}
+
+.focus-list li {
+  line-height: 1.45;
+}
+
 .section-block {
   margin: 1rem 0;
   padding: clamp(1.15rem, 2.5vw, 1.8rem);
