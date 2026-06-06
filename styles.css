@@ -521,6 +521,8 @@ main {
 }
 
 .paper-page .hero-copy {
+  width: 100%;
+  max-width: none;
   padding: clamp(1.3rem, 3vw, 2.2rem);
   border: 1px solid var(--line);
   border-radius: var(--radius);
